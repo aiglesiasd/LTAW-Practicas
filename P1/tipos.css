@@ -1,0 +1,16 @@
+.tablas {
+    width: 100%;
+    border: 1px solid #999;
+    text-align: left;
+    border-collapse: collapse;
+    margin: 0 0 1em 0;
+    caption-side: top;
+ }
+.bg {
+   background-size: 100% 100%;
+   background-attachment: fixed;
+}
+.titulo{
+   color: rgb(13, 13, 14);
+
+}
