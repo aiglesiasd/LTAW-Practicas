@@ -10,7 +10,12 @@
    background-size: 100% 100%;
    background-attachment: fixed;
 }
-.titulo{
-   color: rgb(13, 13, 14);
 
-}
+.titulo {
+   
+   font-family: Arial Black; 
+   font-weight: bold; 
+   font-size: 40px; 
+   color: rgb(170, 198, 247); 
+   text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+   }
