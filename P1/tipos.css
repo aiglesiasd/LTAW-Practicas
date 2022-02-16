@@ -19,6 +19,20 @@
    color: rgb(170, 198, 247); 
    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
    }
+.tituloh3{
+    font-family: Arial Black; 
+    font-weight: bold; 
+    font-size: 30px; 
+    color: rgb(170, 198, 247); 
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    }
+.tituloh4{
+        font-family: Arial Black; 
+        font-weight: bold; 
+        font-size: 20px; 
+        color: rgb(170, 198, 247); 
+        text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+        }   
    .ul {
       list-style-type: none;
       margin: 0;
