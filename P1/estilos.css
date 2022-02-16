@@ -5,7 +5,7 @@
 #productos{
     text-align:center;
     background-image: rgb(179, 185, 179);
-    margin: 50px 100px 100px 100px;
+    margin: 10px 100px 100px 100px;
     border-width: 3px;
     border-radius: 60px;  
 }
@@ -24,6 +24,13 @@
     color: rgb(170, 198, 247); 
     text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
     }
+.tituloh3{
+        font-family: Arial Black; 
+        font-weight: bold; 
+        font-size: 30px; 
+        color: rgb(170, 198, 247); 
+        text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+        }
     .ul {
         list-style-type: none;
         margin: 0;
