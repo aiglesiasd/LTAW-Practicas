@@ -10,12 +10,16 @@
     border-radius: 60px;  
 }
 
-#icono1{
+.icono1{
     border-color: rgb(0, 204, 255);
     border-style: solid;
     border-width: 5px;
     border-radius: 60px;
     margin: 50px 50px 50px 50px;
+    
+}
+.icono1:hover {
+    transform:  scale(1.2);
 }
 .titulo {
     font-family: Arial Black; 
@@ -63,4 +67,11 @@
     .activar {
         background-color: #4CAF50;
     }
-  
+    .na a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 0px;
+        text-decoration: none;
+    }
+
