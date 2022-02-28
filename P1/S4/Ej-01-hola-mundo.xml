@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- La estructura de mi tienda-->
+<tienda>
+    <producto>
+        Mi producto 1
+    </producto>
+    <producto>
+        Mi producto 2
+    </producto> <!-- XML es sensible a las mayusculas, las estiquetas de producto y Producto serian distintas porejemplo-->
+</tienda>
