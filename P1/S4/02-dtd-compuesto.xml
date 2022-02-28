@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Declaracion de la gramatica -->
+<!DOCTYPE tienda [
+    <!ELEMENT tienda (producto)> <!--producto= indica que en su cuerpo solo puede haber la etiqueta producto-->
+    <!ELEMENT producto (#PCDATA)>
+]>
+
+<!-- Dentro del elemento tienda solo puede haber la etiqueta  producto-->
+<tienda>
+    <producto>
+            Es un producto
+    </producto>
+</tienda>
