@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- La estructura de mi tienda-->
+<tienda xmlns:t1 ="https://github.com/myTeachingURJC/2021-2022-LTAW/wiki/S4:-XML"
+        xmlns:t2 ="https://github.com/myTeachingURJC/2021-2022-LTAW/wiki/">
+
+    <t1:producto>
+        Mi producto 1
+    </t1:producto>
+    <t2:producto>
+        Mi producto 2
+    </t2:producto> <!-- XML es sensible a las mayusculas, las estiquetas de producto y Producto serian distintas porejemplo-->
+</tienda>
