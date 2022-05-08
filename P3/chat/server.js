@@ -3,8 +3,8 @@ const socket = require('socket.io');
 const http = require('http');
 const express = require('express');
 const colors = require('colors');
-
-const PUERTO = 8080;
+const fs = require('fs');
+const PUERTO = 9090;
 
 //-- Crear una nueva aplciacion web
 const app = express();
@@ -18,7 +18,7 @@ const io = socket(server);
 //-------- PUNTOS DE ENTRADA DE LA APLICACION WEB
 //-- Definir el punto de entrada principal de mi aplicación web
 app.get('/', (req, res) => {
-  res.send('Bienvenido a mi aplicación Web!!!' + '<p><a href="/Ej-09.html">Test</a></p>');
+  res.send(fs.readFileSync('./public/chat.html', 'utf-8'));
 });
 
 //-- Esto es necesario para que el servidor le envíe al cliente la
@@ -41,7 +41,7 @@ io.on('connect', (socket) => {
 
   //-- Mensaje recibido: Reenviarlo a todos los clientes conectados
   socket.on("message", (msg)=> {
-    console.log("Mensaje Recibido!: " + msg.blue);
+    console.log("Mensaje Recibido!: " + msg.green);
 
     //-- Reenviarlo a todos los clientes conectados
     io.send(msg);
