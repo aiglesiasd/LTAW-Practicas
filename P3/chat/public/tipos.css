@@ -1,0 +1,94 @@
+.tablas {
+    width: 100%;
+    border: 1px solid #999;
+    text-align: left;
+    border-collapse: collapse;
+    margin: 0 0 1em 0;
+    caption-side: top;
+ }
+.bg {
+   background-size: 100% 100%;
+   background-attachment: fixed;
+}
+
+.titulo {
+   
+   font-family: Arial Black; 
+   font-weight: bold; 
+   font-size: 40px; 
+   color: rgb(170, 198, 247); 
+   text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+   }
+.tituloh3{
+    font-family: Arial Black; 
+    font-weight: bold; 
+    font-size: 30px; 
+    color: rgb(170, 198, 247); 
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    }
+.tituloh4{
+        font-family: Arial Black; 
+        font-weight: bold; 
+        font-size: 20px; 
+        color: rgb(170, 198, 247); 
+        text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+        }   
+   .ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+  }
+  
+  .n {
+      float: left;
+      border-right:1px solid #bbb;
+  }
+  
+  .n:last-child {
+      border-right: none;
+  }
+  
+  .n a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+  }
+  
+  .n a:hover:not(.activar) {
+      background-color: #111;
+  }
+  
+  .activar {
+      background-color: #4CAF50;
+  }
+  .teleo{
+    border-color: rgb(0, 204, 255);
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 60px;
+    margin: 0px 0px 00px 0px;
+  }
+  .na a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0px;
+    text-decoration: none;
+}
+.texto {
+    margin-left: 12px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.chat {
+    background-color: rgb(116, 119, 116);
+    height: 80%;
+    width: 60%;
+    margin: auto;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
