@@ -41,7 +41,6 @@ io.on('connect', (socket) => {
     cliente -= 1;
     io.send('Usuario se ha desconectado');
   });  
-
 socket.on("message", (msg)=> {  
     console.log("Mensaje Recibido!: " + msg.green); 
         if (msg[0] == "/") {
