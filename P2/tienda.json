@@ -5,37 +5,37 @@
                 {
                      "nombre": "Monitor FHD V22",
                      "precio": 102,
-                     "stock": 50
+                     "stock": 12
                  },
                  {
                      "nombre": "VA249HE",
                      "precio": 114,
-                     "stock": 45
+                     "stock": 10
                  },
                  {
                      "nombre": "BASIC B2C",
                      "precio": 116,
-                     "stock": 80
+                     "stock": 8
                  },
                  {
                     "nombre": "U2879VF",
                     "precio": 237,
-                    "stock": 80
+                    "stock": 7
                 },
                 {
                     "nombre": "Monitor IPS 1080p de 27",
                     "precio": 145,
-                    "stock": 80
+                    "stock": 11
                 },
                 {
                     "nombre": "Thinkvision T23d",
                     "precio": 150,
-                    "stock": 80
+                    "stock": 16
                 },
                 {
                     "nombre": "Lenovo G32qc-10",
                     "precio": 298,
-                    "stock": 80
+                    "stock": 19
                 }
              ],
 
@@ -43,64 +43,64 @@
                  {
                      "nombre": "HP 290 G4 MT",
                      "precio": 401,
-                     "stock": 50
+                     "stock": 12
                  },
                  {
                      "nombre": "HP 290 G3 SFF",
                      "precio": 401,
-                     "stock": 30
+                     "stock":13
                  },
                  {
                      "nombre": "LENOVO V35s SFF",
                      "precio": 389,
-                     "stock": 30
+                     "stock": 15
                  },
                  {
                     "nombre": "ThinkCentre M70 SFF",
                     "precio": 459,
-                    "stock": 30
+                    "stock": 4
                 },
                 {
                     "nombre": "ThinkCentre M70 SFF Tiny",
                     "precio": 549,
-                    "stock": 30
+                    "stock": 6
                 },
                 {
                     "nombre": "PB62-B3020ZH",
                     "precio": 498,
-                    "stock": 30
+                    "stock": 5
                 },
                 {
                     "nombre": "PN41-BCO33ZV",
                     "precio": 237,
-                    "stock": 30
+                    "stock": 6
                 }
              ],
              "impresoras":[
                  {
                      "nombre": "ScanJet Enterprise S3",
                      "precio": 566,
-                     "stock": 550
+                     "stock": 5
                  },
                  {
                      "nombre": "SanJet PRO 3000 S4",
                      "precio": 248,
-                     "stock": 400
+                     "stock": 4
                  },
                  {
                      "nombre": "ScanJet Enterprise S5",
                      "precio": 442,
-                     "stock": 350
+                     "stock": 7
                  },
                  {
                     "nombre": "SP-1130N",
                     "precio": 258,
-                    "stock": 400
+                    "stock": 40
                 },
                 {
                     "nombre": "SP-1125N",
                     "precio": 236,
-                    "stock": 350
+                    "stock": 35
                 }
              ]
          }
