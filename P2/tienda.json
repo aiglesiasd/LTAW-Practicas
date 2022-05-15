@@ -1,0 +1,131 @@
+{ 
+    "productos":[
+        {
+            "monitores":[
+                {
+                     "nombre": "Monitor FHD V22",
+                     "precio": 102,
+                     "stock": 50
+                 },
+                 {
+                     "nombre": "VA249HE",
+                     "precio": 114,
+                     "stock": 45
+                 },
+                 {
+                     "nombre": "BASIC B2C",
+                     "precio": 116,
+                     "stock": 80
+                 },
+                 {
+                    "nombre": "U2879VF",
+                    "precio": 237,
+                    "stock": 80
+                },
+                {
+                    "nombre": "Monitor IPS 1080p de 27",
+                    "precio": 145,
+                    "stock": 80
+                },
+                {
+                    "nombre": "Thinkvision T23d",
+                    "precio": 150,
+                    "stock": 80
+                },
+                {
+                    "nombre": "Lenovo G32qc-10",
+                    "precio": 298,
+                    "stock": 80
+                }
+             ],
+
+             "equipos":[
+                 {
+                     "nombre": "HP 290 G4 MT",
+                     "precio": 401,
+                     "stock": 50
+                 },
+                 {
+                     "nombre": "HP 290 G3 SFF",
+                     "precio": 401,
+                     "stock": 30
+                 },
+                 {
+                     "nombre": "LENOVO V35s SFF",
+                     "precio": 389,
+                     "stock": 30
+                 },
+                 {
+                    "nombre": "ThinkCentre M70 SFF",
+                    "precio": 459,
+                    "stock": 30
+                },
+                {
+                    "nombre": "ThinkCentre M70 SFF Tiny",
+                    "precio": 549,
+                    "stock": 30
+                },
+                {
+                    "nombre": "PB62-B3020ZH",
+                    "precio": 498,
+                    "stock": 30
+                },
+                {
+                    "nombre": "PN41-BCO33ZV",
+                    "precio": 237,
+                    "stock": 30
+                }
+             ],
+             "impresoras":[
+                 {
+                     "nombre": "ScanJet Enterprise S3",
+                     "precio": 566,
+                     "stock": 550
+                 },
+                 {
+                     "nombre": "SanJet PRO 3000 S4",
+                     "precio": 248,
+                     "stock": 400
+                 },
+                 {
+                     "nombre": "ScanJet Enterprise S5",
+                     "precio": 442,
+                     "stock": 350
+                 },
+                 {
+                    "nombre": "SP-1130N",
+                    "precio": 258,
+                    "stock": 400
+                },
+                {
+                    "nombre": "SP-1125N",
+                    "precio": 236,
+                    "stock": 350
+                }
+             ]
+         }
+    ],
+    "usuarios":[
+        [{
+            "nombre":"root",
+            "correo":"root@correo.es"
+        },
+        {
+            "nombre":"alberto",
+            "correo":"alberto@correo.es"
+        }
+        ]
+    ],
+    "pedidos":[
+        {
+             "nombre": "alberto",
+             "tarjeta":"1414 1414 1414 1414",
+             "direccion": "calle francia n 1",
+             "productos": "ScanJet Enterprise S3"
+                 
+                    
+                 
+             
+        }
+    ]
+}
