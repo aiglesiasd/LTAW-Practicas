@@ -1,20 +1,58 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario Login</title>
-</head>
-<body>
-    <form action="/procesar" method="get">
-        Nombre:
-        <input type="text" name="nombre"/>
-        <p></p>
-        Correo:
-        <input type="text" name="correo" />
-        <p></p>
-          <input type="submit" value="Enviar"/>
-    </form>
-</body>
+<html lang = "en" dir = "ltr">
+    <head>
+        <meta charset = "utf-8"> 
+        <title>ControlTec</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel = "stylesheet" href="estilos.css">       
+    </head>   
+    <body background="images/fondo.jpg" class ="bg">
+        <font color="black" face="Arial">
+            <hr>
+            <div>
+                <h1 align="center" class="titulo">ControlTec <img class= "titulo"  style = "float:left" hspace = "0" src="images/LOGO.JPG" ></h1>          
+            </div>
+            <br>
+            <hr>
+        </font>  
+        <div>
+            <ul class="ul">
+                <li class="n"><a class="activar" href="tienda.html">Home</a></li>
+                <li class="n"><a href="about.html">About</a></li>
+                <li class="n"><a href="contacto.html">Contact</a></li>
+                <li class="n"><a href="Formulario.html">Login</a></li>
+                <li style="float:right" class="na"><a href="comprar"><img src="carrito.JPG"width = "60px"  height="45px"></a></li>
+               
+            </ul>
+        </div>
+        <hr>
+        <div align="center">
+            <h3>Formulario Login</h3>
+            <form  action="/procesar" method="get">
+                Nombre:
+                <input type="text" name="nombre"/>
+                <p></p>
+                Correo:
+                <input type="text" name="correo" />
+                <p></p>
+                <input type="submit" value="Enviar"/>
+            </form>
+        </div>
+        <hr>
+        <footer>
+            <table align="center">
+                <tr>
+                    <td>
+                        <p>Página realizada por Alberto Iglesias </p>
+                    </td>
+                    <td>
+                        <ol>
+                            <a href="https://github.com/aiglesiasd"><img  src="images/github.JPG"></a>
+                        </ol>
+                    </td>
+                </tr>
+            </table>                       
+        </footer>  
+    </body>
 </html>
