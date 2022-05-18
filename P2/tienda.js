@@ -105,7 +105,9 @@ const server = http.createServer(function (req, res) {
             console.log(" Direccion: " + direccion);
             console.log(" Tarjeta:" + tarjeta);
             console.log(" Pedido:" + pedidos);
-            
+            nombre = JSON.parse(J_SON)['pedidos'][0]['nombre'];
+            console.log(nombre);
+            if (user==nombre) {
             
 
             date = confirmaCompra;
@@ -114,7 +116,10 @@ const server = http.createServer(function (req, res) {
             date = date.replace("TARJETA", tarjeta);
             date = date.replace("PEDIDO", pedidos);
             mime = "text/html";
-
+          }else{
+            date = fs.readFileSync('error.html','utf-8'); 
+            mime = "text/html";
+        }
             break;
         case 'procesar':
             let correo = myURL.searchParams.get('correo');
