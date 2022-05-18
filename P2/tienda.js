@@ -92,22 +92,22 @@ const server = http.createServer(function (req, res) {
             break;
         case 'compra':
               //-- Leer los parámetros
-            let usuari = myURL.searchParams.get('usuario');
+            let user = myURL.searchParams.get('usuario');
             let direccion = myURL.searchParams.get('direccion');
             let tarjeta = myURL.searchParams.get('tarjeta');
-            console.log(" Usuario----> " + usuari);
+            console.log(" Usuario----> " + user);
             console.log(" Envio ----> " + direccion);
             console.log(" tarjeta---------> " + tarjeta);
-            info_pedidos = JSON.parse(J_SON);
-            info_pedidos = info_pedidos["pedidos"][1];
-            //-- Mostrar informacion sobre la tienda
-            console.log("Productos en la tienda *****************" + info_pedidos);
+            pedidos = JSON.parse(J_SON)["pedidos"][1];
+            
+
             date = confirmaCompra;
-            date = date.replace("USUARIO", usuari);
+            date = date.replace("USUARIO", user);
             date = date.replace("DIRECCION", direccion);
             date = date.replace("TARJETA", tarjeta);
-           
+
             mime = "text/html";
+
             break;
         case 'procesar':
             let correo = myURL.searchParams.get('correo');
@@ -151,6 +151,9 @@ const server = http.createServer(function (req, res) {
             date = fs.readFileSync(FICHERO1);
             break;
         case 'images/LOGO.JPG':
+            date = fs.readFileSync(FICHERO1);
+            break;
+        case "images/github.JPG":
             date = fs.readFileSync(FICHERO1);
             break;
         case 'images/licencia.JPG':
