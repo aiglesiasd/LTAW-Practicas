@@ -117,7 +117,7 @@ const server = http.createServer(function (req, res) {
             date = date.replace("PEDIDO", pedidos);
             mime = "text/html";
           }else{
-            date = fs.readFileSync('error.html','utf-8'); 
+            date = fs.readFileSync('nopermitido.html','utf-8'); 
             mime = "text/html";
         }
             break;
@@ -227,6 +227,10 @@ const server = http.createServer(function (req, res) {
             date = RES;
             get_cookie(req);
             break; 
+        case 'nopermitido.html':
+          date = RES;
+          get_cookie(req);
+          break; 
         case "confirmaCompra.html":
             date = confirmaCompra;
             get_cookie(req);
