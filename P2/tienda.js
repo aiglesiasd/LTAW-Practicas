@@ -5,9 +5,44 @@ const http = require('http');
 const fs = require('fs');
 //-- Definir el puerto a utilizar 9090 como dicen las especificaciones
 const PUERTO = 9090;
+const form = fs.readFileSync('Formulario.html','utf-8');
+const RES = fs.readFileSync('permitido.html', 'utf-8');
+const ERROR = fs.readFileSync('error.html');
+const equipos = fs.readFileSync('ordenadoresSobremesa.html','utf-8');
 
+const J_SON = fs.readFileSync('tienda.json','utf-8');
 //-- Mensaje de arranque
 console.log("Arrancando servidor...");
+//-- Función de retrollamada de petición recibida
+//-- Cada vez que un cliente realiza una petición
+//-- Se llama a esta función
+function get_cookie(req){
+
+  //-- Leer las cookies
+  const cookie = req.headers.cookie;
+
+  if (cookie) {
+      console.log("Cookie: " + cookie);
+
+      //-- Obtener un array con todos los pares nombre-valor
+      let pares = cookie.split(";");
+      
+      pares.forEach((element, index) => {
+  
+          //-- Obtener los nombres y valores por separado
+          let [nombre, valor] = element.split('=');
+
+          //-- Leer el usuario
+          //-- Solo si el nombre es 'user'
+          if (nombre.trim() === 'user') {
+              user = valor;
+          }
+      });
+   
+  } else {
+      console.log('No hay cookie');
+  }
+}
 //-- Función de retrollamada de petición recibida
 //-- Cada vez que un cliente realiza una petición
 //-- Se llama a esta función
@@ -48,22 +83,50 @@ const server = http.createServer(function (req, res) {
     let mime = Extensions[ext];
     console.log("Tipo solicitado: " + mime);
     
-    fs.readFile(FICHERO, function(err, data){
-        if ((err) || (FICHERO == 'error.html')){
-            res.statusCode = 404;
-            res.statusMessage = "Not Found";
-            res.setHeader('Content-Type',mime);
-            console.log("Error");
-        }else{
-        console.log("Lectura completada, 200 OK")
-        res.setHeader('Content-Type', mime);
-        res.statusCode = code; 
-        res.statusMessage = code_msg;
-        } 
-        res.write(data); 
-        res.end(); //Terminar y enviar
+    
+    
+        
+    switch (FICHERO1) {
+      case '':
+          date = equipos;
+          get_cookie(req);
+          break;
+          case 'Formulario.html':
+            date = form;
+            get_cookie(req);
+            break; 
+        case 'permitido.html':
+            date = RES;
+            get_cookie(req);
+            break; 
+            // si no --> error
+        default:
+          res.setHeader('date-Type','text/html');
+          res.statusCode = 404;
+          res.statusMessage = "Not Found";
+          console.log("Error");
+          res.write(ERROR);
+          res.end();
+          return;
+  }
+          //-- Si hay datos en el cuerpo, se imprimen
+        req.on('data', (cuerpo) => {
+
+          req.setEncoding('utf8');
+          console.log(`Cuerpo (${cuerpo.length} )`);
+          console.log(` ${cuerpo}`);
+        });
+      
+    //-- Esto solo se ejecuta cuando llega el final del mensaje de solicitud
+    req.on('end', ()=> {
+
+        //-- Generar respuesta
+        res.setHeader('date-Type', mime);
+        res.write(date);
+        res.end();
+        
     });
-  });
+});
 
 //-- Activar el servidor: ¡Que empiece la fiesta!
 server.listen(PUERTO);
