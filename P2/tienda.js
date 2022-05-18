@@ -10,10 +10,13 @@ const form2 = fs.readFileSync('compra.html','utf-8');
 const RES = fs.readFileSync('permitido.html', 'utf-8');
 const ERROR = fs.readFileSync('error.html');
 const equipos = fs.readFileSync('ordenadoresSobremesa.html','utf-8');
+const monitores = fs.readFileSync('monitores.html','utf-8');
+const escaneres = fs.readFileSync('escaneres.html','utf-8');
 const confirmaCompra = fs.readFileSync('confirmaCompra.html','utf-8');
 const J_SON = fs.readFileSync('tienda.json','utf-8');
 const contacto = fs.readFileSync('contacto.html','utf-8');
 const about = fs.readFileSync('about.html','utf-8');
+
 //-- Mensaje de arranque
 console.log("Arrancando servidor...");
 //-- Función de retrollamada de petición recibida
@@ -154,6 +157,9 @@ const server = http.createServer(function (req, res) {
         case 'tipos.css':
             date = fs.readFileSync(FICHERO1);
             break;
+        case 'images/HPE1.JPG':
+          date = fs.readFileSync(FICHERO1);
+          break;
         case 'images/LOGO.JPG':
             date = fs.readFileSync(FICHERO1);
             break;
@@ -192,15 +198,12 @@ const server = http.createServer(function (req, res) {
             break;
         case 'ordenadoresSobremesa.html':
             date = equipos;
-            get_cookie(req);
             break; 
         case 'error.html':
             date = ERROR;
-            get_cookie(req);
             break;
         case 'Formulario.html':
             date = form;
-            get_cookie(req);
             break; 
         case 'about.html':
           date = about;
@@ -208,7 +211,12 @@ const server = http.createServer(function (req, res) {
           break; 
         case "contacto.html":
             date = contacto;
-            get_cookie(req);
+            break;
+        case "monitores.html":
+            date = monitores;
+            break;
+        case "escaneres.html":
+            date = escaneres;
             break; 
         case 'permitido.html':
             date = RES;
@@ -220,7 +228,6 @@ const server = http.createServer(function (req, res) {
             break; 
         case "compra.html":
           date = form2;
-          get_cookie(req);
           break;   
         // si no --> error
         default:
