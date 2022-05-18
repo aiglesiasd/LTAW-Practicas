@@ -70,6 +70,7 @@ const server = http.createServer(function (req, res) {
 
     let ext = FICHERO.split(".")[1];
     FICHERO = "." + FICHERO;
+    
     //Extensions
     const Extensions = {
         "html" : "text/html",
@@ -89,7 +90,7 @@ const server = http.createServer(function (req, res) {
     console.log(FICHERO1);
 
 
-
+    
     switch (FICHERO1) {
         case '':
             date = tienda;
@@ -191,7 +192,16 @@ const server = http.createServer(function (req, res) {
             break;  
         case "images/Tiny.JPG":
             date = fs.readFileSync(FICHERO1);
+            break;
+        case "images/MONITORES.JPG":
+            date = fs.readFileSync(FICHERO1);
+            break;
+        case "images/ESCANERES.jpg":
+            date = fs.readFileSync(FICHERO1);
             break; 
+          case "images/PCSM.JPG":
+            date = fs.readFileSync(FICHERO1);
+            break;
         case 'images/ASUS1.JPG':
             date = fs.readFileSync(FICHERO1);
             break; 
@@ -199,6 +209,27 @@ const server = http.createServer(function (req, res) {
             date = fs.readFileSync(FICHERO1);
             break;
         case "images/fondo.jpg":
+            date = fs.readFileSync(FICHERO1);
+            break;
+        case "images/empresa.jpg":
+              date = fs.readFileSync(FICHERO1);
+              break;
+        case "images/BASIC.JPG":
+            date = fs.readFileSync(FICHERO1);
+            break;
+        case "images/teleoperando.jpg":
+            date = fs.readFileSync(FICHERO1);
+            break;
+        case "images/LenovoG32qc-10.JPG":
+            date = fs.readFileSync(FICHERO1);
+            break;
+        case "images/iconoContactar.JPG":
+            date = fs.readFileSync(FICHERO1);
+            break;
+        case "images/U2879VF.JPG":
+            date = fs.readFileSync(FICHERO1);
+            break;
+        case "images/THINKVISIONT23d.JPG":
             date = fs.readFileSync(FICHERO1);
             break;
         case 'ordenadoresSobremesa.html':
