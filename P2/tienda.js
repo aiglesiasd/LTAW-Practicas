@@ -79,10 +79,10 @@ const server = http.createServer(function (req, res) {
     };
     let code = 200;
     let code_msg = "OK";
-    //-- Asignar que tipo de mime leer
-    let mime = Extensions[ext];
-    console.log("Tipo solicitado: " + mime);
     
+    let mime = Extensions[ext];
+    FICHERO1 = FICHERO.substr(2);
+    console.log(FICHERO1);
     
     
         
@@ -91,10 +91,13 @@ const server = http.createServer(function (req, res) {
           date = equipos;
           get_cookie(req);
           break;
-          case 'Formulario.html':
-            date = form;
-            get_cookie(req);
-            break; 
+      case 'procesar':
+        date = RES;
+        break;
+      case 'Formulario.html':
+          date = form;
+          get_cookie(req);
+          break; 
         case 'permitido.html':
             date = RES;
             get_cookie(req);
