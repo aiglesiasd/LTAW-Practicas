@@ -12,6 +12,8 @@ const ERROR = fs.readFileSync('error.html');
 const equipos = fs.readFileSync('ordenadoresSobremesa.html','utf-8');
 const confirmaCompra = fs.readFileSync('confirmaCompra.html','utf-8');
 const J_SON = fs.readFileSync('tienda.json','utf-8');
+const contacto = fs.readFileSync('contacto.html','utf-8');
+const about = fs.readFileSync('about.html','utf-8');
 //-- Mensaje de arranque
 console.log("Arrancando servidor...");
 //-- Función de retrollamada de petición recibida
@@ -95,17 +97,19 @@ const server = http.createServer(function (req, res) {
             let user = myURL.searchParams.get('usuario');
             let direccion = myURL.searchParams.get('direccion');
             let tarjeta = myURL.searchParams.get('tarjeta');
-            console.log(" Usuario----> " + user);
-            console.log(" Envio ----> " + direccion);
-            console.log(" tarjeta---------> " + tarjeta);
-            pedidos = JSON.parse(J_SON)["pedidos"][1];
+            let pedidos = myURL.searchParams.get('pedido');
+            console.log(" Usuario: " + user);
+            console.log(" Direccion: " + direccion);
+            console.log(" Tarjeta:" + tarjeta);
+            console.log(" Pedido:" + pedidos);
+            
             
 
             date = confirmaCompra;
             date = date.replace("USUARIO", user);
             date = date.replace("DIRECCION", direccion);
             date = date.replace("TARJETA", tarjeta);
-
+            date = date.replace("PEDIDO", pedidos);
             mime = "text/html";
 
             break;
@@ -196,6 +200,14 @@ const server = http.createServer(function (req, res) {
             break;
         case 'Formulario.html':
             date = form;
+            get_cookie(req);
+            break; 
+        case 'about.html':
+          date = about;
+          get_cookie(req);
+          break; 
+        case "contacto.html":
+            date = contacto;
             get_cookie(req);
             break; 
         case 'permitido.html':
