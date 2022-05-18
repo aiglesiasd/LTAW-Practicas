@@ -16,7 +16,7 @@ const confirmaCompra = fs.readFileSync('confirmaCompra.html','utf-8');
 const J_SON = fs.readFileSync('tienda.json','utf-8');
 const contacto = fs.readFileSync('contacto.html','utf-8');
 const about = fs.readFileSync('about.html','utf-8');
-
+const tienda = fs.readFileSync('tienda.html','utf-8');
 //-- Mensaje de arranque
 console.log("Arrancando servidor...");
 //-- Función de retrollamada de petición recibida
@@ -92,7 +92,7 @@ const server = http.createServer(function (req, res) {
 
     switch (FICHERO1) {
         case '':
-            date = equipos;
+            date = tienda;
             get_cookie(req);
             break;
         case 'compra':
@@ -203,7 +203,10 @@ const server = http.createServer(function (req, res) {
             break;
         case 'ordenadoresSobremesa.html':
             date = equipos;
-            break; 
+            break;
+        case 'tienda.html':
+          date = tienda;
+          break;     
         case 'error.html':
             date = ERROR;
             break;
