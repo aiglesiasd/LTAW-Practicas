@@ -14,6 +14,21 @@ const server = http.Server(app);
 //-- Crear el servidor de websockets, asociado al servidor http
 const io = socket(server);
 
+io.on('connect', (socket) => {
+  io.send("El usuario se ha unido al chat")
+  console.log('** Nueva conexión **'.yellow );
+  usuarios = usuarios + 1;
+  //-- Enviar numero de usuarios 
+  win.webContents.send('users', usuarios);
+   socket.send('Bienvenido' + "!" );
+  //-- Evento de desconexión
+  socket.on('disconnect', function(){
+    io.send("El usuario ha dejado el chat")
+    console.log('** Conexión terminada **'.yellow);
+    usuarios = usuarios - 1;
+    win.webContents.send('users', usuarios);
+  });  
+
 if(msg.includes("/")){
   if (msg == "/help") {
       content = '<h4> Comandos disponibles:</h4>'
@@ -40,6 +55,7 @@ if(msg.includes("/")){
   io.send(msg);
 }    
 }
+});
 //-- Variable para acceder a la ventana principal
 //-- Se pone aquí para que sea global al módulo principal
 let win = null;
