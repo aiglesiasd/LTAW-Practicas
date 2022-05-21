@@ -105,7 +105,7 @@ electron.app.on('ready', () => {
   //-- y luego enviar el mensaje al proceso de renderizado para que 
   //-- lo saque por la interfaz gráfica
   win.on('ready-to-show', () => {
-    win.webContents.send('print', "MENSAJE ENVIADO DESDE PROCESO MAIN");
+    win.webContents.send('ip', 'http://' + ip.address() + ':' + PUERTO);
   });
 
   //-- Enviar un mensaje al proceso de renderizado para que lo saque
