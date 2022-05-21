@@ -44,4 +44,13 @@ electron.ipcRenderer.on('print', (event, message) => {
     console.log("Recibido: " + message);
     print.textContent = message;
   });
-  
+  electron.ipcRenderer.on('ip', (event, message) => {
+    console.log("Recibido: " + message);
+    dir.textContent = message;
+        
+        qrcode.toDataURL(message, function (err, url) {
+            console.log("Imprimiendo codigo qr");
+            qr.src = url;
+        });
+
+});
