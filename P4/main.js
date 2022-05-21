@@ -1,11 +1,60 @@
 //-- Cargar el módulo de electron
 const electron = require('electron');
-
+const http = require('http');
+const express = require('express');
+const colors = require('colors');
+const ip = require('ip');
+PUERTO = 9090;
 console.log("Arrancando electron...");
 
+//-- Crear una nueva aplciacion web
+const app = express();
+//-- Crear un servidor, asosiaco a la App de express
+const server = http.Server(app);
+//-- Crear el servidor de websockets, asociado al servidor http
+const io = socket(server);
+
+if(msg.includes("/")){
+  if (msg == "/help") {
+      content = '<h4> Comandos disponibles:</h4>'
+                  + '<br> /hello: Recibir saludo' + 
+                  + '<br> /help: ayuda con los comandos disponibles'
+                  + '<br> /list: Ver el nº de usuarios conectados'
+                  + '<br> /date: Fecha'
+                  + '<br> /users: usuarios en linea '
+      socket.send(content);
+  }else if (msg == "/list") {
+    content="Nº de usuarios conectados: " + "<b>"+ usuarios   
+    socket.send(content);
+  }else if (msg == "/hello") {
+    content= "HOLA"
+    socket.send(content);
+  }else if (msg == "/date") {
+    let date = new Date().toDateString();
+    socket.send("fecha actual:" + date);
+    
+  }else if (msg == "/users") {
+    console.log("Todavia no hago nada***")
+    
+  }else{
+  io.send(msg);
+}    
+}
 //-- Variable para acceder a la ventana principal
 //-- Se pone aquí para que sea global al módulo principal
 let win = null;
+
+app.get('/', (req, res) => {
+  let dir = __dirname + '/public/index.html';
+  res.sendFile(dir);
+  console.log("Acceso a la página principal");
+});
+
+app.use('/', express.static(__dirname +'/'));
+app.use(express.static('public'));
+
+
+
 
 //-- Punto de entrada. En cuanto electron está listo,
 //-- ejecuta esta función
