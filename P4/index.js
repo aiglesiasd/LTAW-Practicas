@@ -1,5 +1,6 @@
 const electron = require('electron');
 const qrcode = require('qrcode');
+const ip = require('ip');
 
 console.log("Hola desde el proceso de la web...");
 

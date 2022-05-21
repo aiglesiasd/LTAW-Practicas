@@ -1,4 +1,5 @@
 //-- Cargar el módulo de electron
+const socket = require('socket.io');
 const electron = require('electron');
 const http = require('http');
 const express = require('express');
@@ -61,7 +62,7 @@ if(msg.includes("/")){
 let win = null;
 
 app.get('/', (req, res) => {
-  let dir = __dirname + '/public/index.html';
+  let dir = __dirname + '/public/chat.html';
   res.sendFile(dir);
   console.log("Acceso a la página principal");
 });
