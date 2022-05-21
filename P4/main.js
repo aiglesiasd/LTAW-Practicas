@@ -120,3 +120,7 @@ electron.app.on('ready', () => {
 electron.ipcMain.handle('test', (event, msg) => {
   console.log("-> Mensaje: " + msg);
 });
+//-- Lanzar el servidor HTTP
+//-- ¡Que empiecen los juegos de los WebSockets!
+server.listen(PUERTO);
+console.log("Escuchando en puerto: " + PUERTO);
